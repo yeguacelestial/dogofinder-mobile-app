@@ -1,0 +1,12 @@
+{
+  "name": "dogofinder-mobile-app",
+  "displayName": "dogofinder-mobile-app",
+  "expo": {
+    "name": "dogofinder-mobile-app",
+    "slug": "dogofinder-mobile-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

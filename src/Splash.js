@@ -1,31 +1,31 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { View } from 'react-native'
 
 import LottieView from 'lottie-react-native'
 
 
-export default class Splash extends Component {
+function Splash({ navigation }) {
 
-    render() {
-        return(
-            <View
-                style={{
-                    flex: 1,
-                    backgroundColor: '#66ffa6'
-                }}
-            >
-                <LottieView
-                    source={require('../assets/splash.json')}
-                    autoPlay
-                    loop = { false }
-                    speed = {0.9}
-                    onAnimationFinish = {() => {
-                        console.log('Splash Screen finished!')
-                        // this.props.navigation.replace('Home')
-                    }}
-                />
-            </View>
-        )
-    }
-
+  return(
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: '#66ffa6'
+      }}
+    >
+      <LottieView
+        source={require('../assets/splash.json')}
+        autoPlay
+        loop={false}
+        speed={1}
+        onAnimationFinish={() => {
+          console.log('Splash Screen finished!')
+          navigation.navigate('Home')
+        }}
+      />
+    </View>
+  )
 }
+
+
+export default Splash

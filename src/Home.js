@@ -1,24 +1,37 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-import { View } from 'react-native'
+import { View, Text, BackHandler } from 'react-native'
 
-export default class Home extends Component {
-    constructor(props){
-        super()
+
+function Home({ navigation }) {
+
+  const disableBackButton = () => {
+    BackHandler.exitApp()
+    return true
+  }
+
+  // componentDidMount
+  React.useEffect(() => {
+    BackHandler.addEventListener('hardwareBackPress', disableBackButton)
+    
+    // componentWillUnmount
+    return () => {
+      BackHandler.removeEventListener('hardwareBackPress', disableBackButton)
     }
+  },[])
 
-    render(){
-        return(
-            <View
-                style={{
-                    flex: 1,
-                    backgroundColor: '#fff'
-                }}
-            >
-                <Text>
-                    Home
-                </Text>
-            </View>
-        )
-    }
+  return(
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: '#fff'
+      }}
+    >
+      <Text>
+          Home
+      </Text>
+    </View>
+  )
 }
+
+export default Home

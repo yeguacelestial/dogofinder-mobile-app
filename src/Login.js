@@ -3,7 +3,7 @@ import React from 'react'
 import { View, Text, BackHandler } from 'react-native'
 
 
-function Home({ navigation }) {
+function Login({ navigation }) {
 
   const disableBackButton = () => {
     BackHandler.exitApp()
@@ -28,10 +28,10 @@ function Home({ navigation }) {
       }}
     >
       <Text>
-          Home
+          Login
       </Text>
     </View>
   )
 }
 
-export default Home
+export default Login

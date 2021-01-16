@@ -3,8 +3,11 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
+
+// Screens
 import Splash from './src/Splash'
-import Home from './src/Home'
+import OnboardingScreen from './src/OnboardingScreen'
+import Login from './src/Login'
 
 
 const Stack = createStackNavigator()
@@ -25,10 +28,16 @@ function App() {
           component={Splash}
         />
 
-        {/* HOME SCREEN */}
+        {/* ONBOARDING SCREEN */}
         <Stack.Screen
-          name="Home"
-          component={Home}
+          name="OnboardingScreen"
+          component={OnboardingScreen}
+        />
+
+        {/* LOGIN SCREEN */}
+        <Stack.Screen
+          name="Login"
+          component={Login}
         />
       </Stack.Navigator>
     </NavigationContainer>

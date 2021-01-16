@@ -20,7 +20,7 @@ function Splash({ navigation }) {
         speed={1}
         onAnimationFinish={() => {
           console.log('Splash Screen finished!')
-          navigation.navigate('Home')
+          navigation.navigate('OnboardingScreen')
         }}
       />
     </View>

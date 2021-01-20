@@ -14,6 +14,7 @@ import Onboarding1 from '../assets/onboarding-1.svg'
 import Onboarding2 from '../assets/onboarding-4.svg'
 import Onboarding3 from '../assets/onboarding-5.svg'
 
+
 const Dots = ({selected}) => {
   let backgroundColor
 
@@ -31,6 +32,7 @@ const Dots = ({selected}) => {
     </View>
   )
 }
+
 
 const Done = ({...props}) => (
   <TouchableOpacity
@@ -62,14 +64,12 @@ function OnboardingScreen({ navigation }) {
 
   return(
     <Onboarding
-      // NextButtonComponent={Next}
-      // SkipButtonComponent={Skip}
       DoneButtonComponent={Done}
       DotComponent={Dots}
       nextLabel='Siguiente'
       skipLabel='Saltar'
-      onSkip={() => navigation.replace('Login')}
-      onDone={() => navigation.navigate('Login')}
+      onSkip={() => navigation.replace('LoginScreen')}
+      onDone={() => navigation.navigate('LoginScreen')}
       pages={[
         {
           backgroundColor: '#7cb342',

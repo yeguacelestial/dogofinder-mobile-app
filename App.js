@@ -7,7 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 // Screens
 import Splash from './src/Splash'
 import OnboardingScreen from './src/OnboardingScreen'
-import Login from './src/Login'
+import LoginScreen from './src/LoginScreen'
 
 
 const Stack = createStackNavigator()
@@ -36,8 +36,8 @@ function App() {
 
         {/* LOGIN SCREEN */}
         <Stack.Screen
-          name="Login"
-          component={Login}
+          name="LoginScreen"
+          component={LoginScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>
